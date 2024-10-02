@@ -13,17 +13,12 @@ This repository contains PopClip extensions for [Radarr](https://radarr.video/) 
 ### 1. Download the Extensions
 
 - Clone this repository or download the `Radarr` and `Sonarr` folders.
-  
-### 2. Install the Extensions
 
-1. Open the `Radarr.popclipext` or `Sonarr.popclipext` folder.
-2. Double-click the `Config.plist` file to install the extension to PopClip.
+### 2. Configure the URLs
 
-### 3. Configuration
+Ensure that the URLs in the `Config.plist` files are correct for your Radarr and Sonarr instances. Open the `Config.plist` files in the respective folders and update the URLs to match your local setup:
 
-Ensure that your Radarr and Sonarr instances are running on the correct IP address and port. Update the `Config.plist` files if needed to match your local network setup.
-
-### Example Configuration (Radarr)
+#### Example Radarr Configuration
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -34,10 +29,38 @@ Ensure that your Radarr and Sonarr instances are running on the correct IP addre
     <key>icon</key>
     <string>radarr.png</string>
     <key>url</key>
-    <string>http://10.10.10.7:7879/pewrad/add/new?term=***</string>
+    <string>http://<your_radarr_ip>:<your_radarr_port>/add/new?term=***</string>
 </dict>
 </plist>
 ```
+
+#### Example Sonarr Configuration
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<plist version="1.0">
+<dict>
+    <key>name</key>
+    <string>Sonarr</string>
+    <key>icon</key>
+    <string>sonarr.png</string>
+    <key>url</key>
+    <string>http://<your_sonarr_ip>:<your_sonarr_port>/add/new?term=***</string>
+</dict>
+</plist>
+```
+
+### 3. Rename the Folders
+
+Once you've updated the URLs in the `Config.plist` files:
+
+- Rename the `Radarr` folder to `Radarr.popclipext`.
+- Rename the `Sonarr` folder to `Sonarr.popclipext`.
+
+### 4. Install the Extensions
+
+1. Open the renamed `Radarr.popclipext` and `Sonarr.popclipext` folders.
+2. Double-click the `Config.plist` file inside each folder to install the respective extension to PopClip.
 
 ## Usage
 
@@ -60,4 +83,4 @@ This project is open-source and available under the MIT License. See the LICENSE
 
 ---
 
-Let me know if you'd like to make any adjustments!
+This version now reflects the proper step-by-step order. Let me know if any further adjustments are needed!
