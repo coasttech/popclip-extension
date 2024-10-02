@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plist version="1.0">
+<dict>
+    <key>name</key>
+    <string>Sonarr</string>
+    <key>icon</key>
+    <string>sonarr.png</string>
+    <key>url</key>
+    <string>http://YOURURL/add/new?term=***</string>
+</dict>
+</plist>
